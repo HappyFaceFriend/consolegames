@@ -6,7 +6,7 @@ namespace Engine
 	{
 		//window size
 		//startingScene<T>
-	}
+	};
 	
 	
 }

@@ -1,5 +1,8 @@
 #pragma once
 
+#include "GameSettings.h"
+#include "SceneManager.h"
+#include "Renderer.h"
 namespace Engine
 {
 	class Game
@@ -10,6 +13,9 @@ namespace Engine
 		
 		void GameLoop();
 		void IsOver();
-				
+	
+	private:
+		SceneManager mSceneMgr;
+		Renderer mRenderer;
 	};
 }

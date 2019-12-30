@@ -4,7 +4,7 @@ namespace Engine
 {
 	Game::Game(GameSettings setting)
 	{
-		
+		 
 	}
 	Game::~Game()
 	{
