@@ -4,8 +4,8 @@
 CPP      = g++.exe
 CC       = gcc.exe
 WINDRES  = windres.exe
-OBJ      = main.o Engine/Game.o Engine/SceneManager.o Engine/Renderer.o
-LINKOBJ  = main.o Engine/Game.o Engine/SceneManager.o Engine/Renderer.o
+OBJ      = main.o Engine/Game.o Engine/SceneManager.o Engine/Renderer.o Engine/Vector2.o Engine/Renderable.o
+LINKOBJ  = main.o Engine/Game.o Engine/SceneManager.o Engine/Renderer.o Engine/Vector2.o Engine/Renderable.o
 LIBS     = -L"C:/Program Files (x86)/Dev-Cpp/MinGW64/lib" -L"C:/Program Files (x86)/Dev-Cpp/MinGW64/x86_64-w64-mingw32/lib" -static-libgcc
 INCS     = -I"C:/Program Files (x86)/Dev-Cpp/MinGW64/include" -I"C:/Program Files (x86)/Dev-Cpp/MinGW64/x86_64-w64-mingw32/include" -I"C:/Program Files (x86)/Dev-Cpp/MinGW64/lib/gcc/x86_64-w64-mingw32/4.9.2/include"
 CXXINCS  = -I"C:/Program Files (x86)/Dev-Cpp/MinGW64/include" -I"C:/Program Files (x86)/Dev-Cpp/MinGW64/x86_64-w64-mingw32/include" -I"C:/Program Files (x86)/Dev-Cpp/MinGW64/lib/gcc/x86_64-w64-mingw32/4.9.2/include" -I"C:/Program Files (x86)/Dev-Cpp/MinGW64/lib/gcc/x86_64-w64-mingw32/4.9.2/include/c++"
@@ -35,3 +35,9 @@ Engine/SceneManager.o: Engine/SceneManager.cpp
 
 Engine/Renderer.o: Engine/Renderer.cpp
 	$(CPP) -c Engine/Renderer.cpp -o Engine/Renderer.o $(CXXFLAGS)
+
+Engine/Vector2.o: Engine/Vector2.cpp
+	$(CPP) -c Engine/Vector2.cpp -o Engine/Vector2.o $(CXXFLAGS)
+
+Engine/Renderable.o: Engine/Renderable.cpp
+	$(CPP) -c Engine/Renderable.cpp -o Engine/Renderable.o $(CXXFLAGS)

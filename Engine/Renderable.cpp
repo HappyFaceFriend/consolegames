@@ -23,4 +23,20 @@ namespace Engine
 		mPrevPosition = prevPos;
 		mPosition = pos;
 	}
+	
+	const char* Renderable::GetImage()
+	{
+		std::unique_lock lock(mMutex);
+		return mImage;
+	}
+	const Vector2& Renderable::GetPosition()
+	{
+		std::unique_lock lock(mMutex);
+		return mPosition;
+	}
+	const Vector2& Renderable::GetPrevPosition()
+	{
+		std::unique_lock lock(mMutex);
+		return mPrevPosition;
+	}
 }
